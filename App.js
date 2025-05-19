@@ -29,7 +29,9 @@ function App() {
       <div style={{
         display: "flex",
         justifyContent: "center",
-        gap: "10px"
+        gap: "10px",
+        alignItems:"center",
+        marginBottom:"15px"
       }}>
 
         <input
@@ -42,12 +44,11 @@ function App() {
         <button onClick={addTodo} style={btnStyle}>Add Todo</button>
       </div>
 
-
       {
         todo.map((item,index) => (
           <div key={index} style={itemStyle}>
             <ul style={{ textDecoration: item.completed ? 'line-through' : 'none',
-              width:"62%"
+              width:"61%"
              }} >
               <li > 
                 <span>{item.text}</span>
@@ -77,7 +78,7 @@ let body = {
 
 let inputStyle = {
   width: "35vw",
-  padding: "10px"
+  padding: "12px 10px 12px 10px"
 }
 
 let itemStyle =
@@ -90,7 +91,8 @@ let itemStyle =
   border: "2px solid black",
   borderRadius: "10px",
   padding: "10px",
-  backgroundColor: "darkGray"
+  backgroundColor: "darkGray",
+  wordBreak: "break-word",
 }
 
 let btnStyle = {
